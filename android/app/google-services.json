@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "410526087309",
+    "project_id": "fir-example-ae7d6",
+    "storage_bucket": "fir-example-ae7d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410526087309:android:d977a552337e30f7838ac4",
+        "android_client_info": {
+          "package_name": "com.example.chat_sanple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPBo6EQ6zQouQyoz0zVUIe2Z_8Sf51Ln8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410526087309-2oubl3qflff4an3lj304clvueq2hj6sp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappUi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410526087309:android:363afa35297ed640838ac4",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPBo6EQ6zQouQyoz0zVUIe2Z_8Sf51Ln8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410526087309-2oubl3qflff4an3lj304clvueq2hj6sp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappUi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410526087309:android:3c60e482d1445d49838ac4",
+        "android_client_info": {
+          "package_name": "com.instaflutter.dating.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPBo6EQ6zQouQyoz0zVUIe2Z_8Sf51Ln8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410526087309-nonjj5gjt1j5secj5gkn8r0o8gu6nokq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "410526087309-2oubl3qflff4an3lj304clvueq2hj6sp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsappUi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
