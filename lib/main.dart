@@ -1,6 +1,6 @@
-import 'package:chat_sanple/firestore/room_firestore.dart';
 import 'package:chat_sanple/firestore/user_firestore.dart';
 import 'package:chat_sanple/pages/top_page.dart';
+import 'package:chat_sanple/utils/shared_prefs.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +12,10 @@ void main() async {
 //flutterfire_cliで追加されたfirebase_options.dartのためにいる。
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  final myUid = await UserFirestore.createUser();
-  //myUidがString?型なのでifの記述が必要
-  if (myUid != null) RoomFirestore.createRoom(myUid);
-
+  await SharedPrefs.setPrefsInstance();
+  String? uid = SharedPrefs.fetchUid();
+  //端末に情報があった場合ここの分岐に入らない。
+  if (uid == null) await UserFirestore.createUser();
   runApp(const MyApp());
 }
 
