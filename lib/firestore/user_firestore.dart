@@ -12,7 +12,7 @@ class UserFirestore {
   static Future<String?> insertNewAccount() async {
     try {
       final newDoc = await _userCollection.add({
-        "name": "nanasi",
+        "name": "名無し",
         "image_path": "",
       });
       print("アカウント作成完了");
