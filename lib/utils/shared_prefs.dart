@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+//SharedPrefsっていう端末内にデータ保存するパッケージの処理
 class SharedPrefs {
   static SharedPreferences? _preferences;
 

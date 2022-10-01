@@ -46,15 +46,14 @@ class UserFirestore {
     return null;
   }
 
-//自分の端末に保存されているuidに紐付いているデータをfirestoreで持ってくる
-  static Future<User?> fetchMyProfile() async {
+//引数で入れたユーザーの情報をfirestoreで持ってくる
+  static Future<User?> fetchProfile(String uid) async {
     try {
-      String uid = SharedPrefs.fetchUid()!;
-      final myProfile = await _userCollection.doc(uid).get();
-      User user = User(name: myProfile.data()!["name"], uid: uid);
+      final snapshot = await _userCollection.doc(uid).get();
+      User user = User(name: snapshot.data()!["name"], uid: uid);
       return user;
     } catch (e) {
-      print("自分のユーザー情報の所得失敗 ----- $e");
+      print("ユーザー情報の所得失敗 ----- $e");
       return null;
     }
   }

@@ -18,21 +18,18 @@ class _TopPageState extends State<TopPage> {
       uid: "abc",
       imagePath:
           "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-      lastMessage: "おはようございます",
     ),
     User(
       name: '佐藤',
       uid: "abc",
       imagePath:
           "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-      lastMessage: "こんにちは",
     ),
     User(
       name: '鈴木',
       uid: "abc",
       imagePath:
           "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-      lastMessage: "こんばんは",
     ),
   ];
   @override
@@ -85,7 +82,7 @@ class _TopPageState extends State<TopPage> {
                         style: const TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
-                      Text(userList[index].lastMessage),
+                      Text("こんにちは"),
                     ],
                   ),
                 ],

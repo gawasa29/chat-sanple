@@ -1,3 +1,4 @@
+import 'package:chat_sanple/firestore/room_firestore.dart';
 import 'package:chat_sanple/firestore/user_firestore.dart';
 import 'package:chat_sanple/pages/top_page.dart';
 import 'package:chat_sanple/utils/shared_prefs.dart';
@@ -16,6 +17,7 @@ void main() async {
   String? uid = SharedPrefs.fetchUid();
   //端末に情報があった場合ここの分岐に入らない。
   if (uid == null) await UserFirestore.createUser();
+  await RoomFirestore.fetchjoinedRooms();
   runApp(const MyApp());
 }
 
