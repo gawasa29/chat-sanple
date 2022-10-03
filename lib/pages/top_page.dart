@@ -93,11 +93,11 @@ class _TopPageState extends State<TopPage> {
                         },
                       );
                     } else {
-                      return Text("トークの取得に失敗しました");
+                      return const Text("トークの取得に失敗しました");
                     }
                   });
             } else {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             }
           }),
     );

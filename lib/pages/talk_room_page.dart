@@ -16,6 +16,7 @@ class TalkRoomPage extends StatefulWidget {
 }
 
 class _TalkRoomPageState extends State<TalkRoomPage> {
+  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +91,7 @@ class _TalkRoomPageState extends State<TalkRoomPage> {
                           }),
                     );
                   } else {
-                    return Center(
+                    return const Center(
                       child: Text('メッセージがありません'),
                     );
                   }
@@ -103,18 +104,27 @@ class _TalkRoomPageState extends State<TalkRoomPage> {
                   height: 60,
                   child: Row(
                     children: [
-                      const Expanded(
+                      Expanded(
                         child: Padding(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           child: TextField(
-                            decoration: InputDecoration(
+                            controller: controller,
+                            decoration: const InputDecoration(
                               contentPadding: EdgeInsets.only(left: 10),
                               border: OutlineInputBorder(),
                             ),
                           ),
                         ),
                       ),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.send))
+                      IconButton(
+                          onPressed: () {
+                            RoomFirestore.sendMessage(
+                                roomId: widget.talkRoom.roomId,
+                                message: controller.text);
+                            //sendボタン押したら入力されている値をクリア
+                            controller.clear();
+                          },
+                          icon: const Icon(Icons.send))
                     ],
                   ),
                 ),
