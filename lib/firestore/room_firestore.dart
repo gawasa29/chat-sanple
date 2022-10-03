@@ -63,4 +63,13 @@ class RoomFirestore {
       return null;
     }
   }
+
+  static Stream<QuerySnapshot> fetchMessageSnapshot(String roomId) {
+    return _roomCollection
+        .doc(roomId)
+        .collection('message')
+        //orderBy（特定の条件で並べ替える）チャットのメッセージを時間ごとで表示したいから並び替えるorderByを使っている。
+        .orderBy('send_time', descending: true)
+        .snapshots();
+  }
 }

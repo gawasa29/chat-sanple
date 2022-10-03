@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import '../model/talk_room.dart';
-import '../model/user.dart';
 import 'talk_room_page.dart';
 
 class TopPage extends StatefulWidget {
@@ -15,26 +14,6 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  List<User> userList = [
-    User(
-      name: '田中',
-      uid: "abc",
-      imagePath:
-          "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-    ),
-    User(
-      name: '佐藤',
-      uid: "abc",
-      imagePath:
-          "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-    ),
-    User(
-      name: '鈴木',
-      uid: "abc",
-      imagePath:
-          "https://www.google.com/search?q=udemy&rlz=1C5CHFA_enJP1017JP1017&sxsrf=ALiCzsYb5OOxw0nhMl3TgkE_X1gTjvLbdA:1663526366784&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi6qarR_p76AhUK_WEKHdFWCX4Q_AUoA3oECAIQBQ&biw=1920&bih=859&dpr=1#imgrc=353mCegWxiYWpM",
-    ),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,11 +46,12 @@ class _TopPageState extends State<TopPage> {
                         itemBuilder: (context, index) {
                           return InkWell(
                             onTap: () {
+                              print(talkRooms[index].roomId);
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => TalkRoomPage(
-                                        talkRooms[index].talkUser.name)),
+                                    builder: (context) =>
+                                        TalkRoomPage(talkRooms[index])),
                               );
                             },
                             child: SizedBox(
